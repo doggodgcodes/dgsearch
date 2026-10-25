@@ -32,18 +32,18 @@ function RegisterLink(Link, Title = Link, Description = "This page does not have
     FixedTitle = FixedLink;
   }
   if (FixedLink.startsWith("http://")) {
-    Titles.push(FixedTitle.slice(6,FixedTitle.length-1));
+    Titles.push(FixedTitle.slice(7,FixedTitle.length));
   } else {
-    Titles.push(FixedTitle.slice(7,FixedTitle.length-1));
+    Titles.push(FixedTitle.slice(8,FixedTitle.length));
   }
   Descs.push(Description);
   if (RegisterVariants == true) {
     for (let i = 0; i < TLDs.length-1; i++) {
       Links.push(DeregisterTLD(FixedLink, i)+TLDs[i]);
       if (FixedLink.startsWith("http://")) {
-        Titles.push(DeregisterTLD(FixedTitle.slice(6,FixedTitle.length-1),1)+TLDs[i]);
+        Titles.push(DeregisterTLD(FixedTitle.slice(7,FixedTitle.length),1)+TLDs[i]);
       } else {
-        Titles.push(DeregisterTLD(FixedTitle.slice(7,FixedTitle.length-1),1)+TLDs[i]);
+        Titles.push(DeregisterTLD(FixedTitle.slice(8,FixedTitle.length),1)+TLDs[i]);
       }
       Descs.push("This page does not have an associated description.");
     }
