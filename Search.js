@@ -24,6 +24,12 @@ function DeregisterTLD(Link, Index) {
 function RegisterLink(Link, Title = Link, Description = "This page does not have an associated description.", RegisterVariants = window.RegisterVariants) {
   let FixedLink = Link;
   let FixedTitle = Title;
+  let titleNormalized;
+  if (FixedTitle == FixedLink) {
+    titleNormalized = true;
+  } else {
+    titleNormalized = false;
+  }
   if (!Link.startsWith("http://") || !Link.startsWith("https://")) {
     FixedLink = "http://" + Link;
   }
@@ -40,10 +46,18 @@ function RegisterLink(Link, Title = Link, Description = "This page does not have
   if (RegisterVariants == true) {
     for (let i = 0; i < TLDs.length-1; i++) {
       Links.push(DeregisterTLD(FixedLink, i)+TLDs[i]);
-      if (FixedLink.startsWith("http://")) {
-        Titles.push(DeregisterTLD(FixedTitle.slice(7,FixedTitle.length),1)+TLDs[i]);
+      if (titleNormalized == false) {
+        if (FixedLink.startsWith("http://")) {
+          Titles.push(DeregisterTLD(FixedTitle.slice(7,FixedTitle.length),1)+TLDs[i]);
+        } else if (!FixedLink.startsWith("http://")) {
+          Titles.push(DeregisterTLD(FixedTitle.slice(8,FixedTitle.length),1)+TLDs[i]);
+        }
       } else {
-        Titles.push(DeregisterTLD(FixedTitle.slice(8,FixedTitle.length),1)+TLDs[i]);
+        if (FixedLink.startsWith("http://")) {
+          Titles.push(DeregisterTLD(FixedTitle,1)+TLDs[i]);
+        } else if (!FixedLink.startsWith("http://")) {
+          Titles.push(DeregisterTLD(FixedTitle,1)+TLDs[i]);
+        }
       }
       Descs.push("This page does not have an associated description.");
     }
