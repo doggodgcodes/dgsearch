@@ -54,9 +54,9 @@ function RegisterLink(Link, Title = Link, Description = "This page does not have
         }
       } else {
         if (FixedLink.startsWith("http://")) {
-          Titles.push(DeregisterTLD(FixedTitle,i)+TLDs[i]);
+          Titles.push(DeregisterTLD(FixedTitle.slice(0,FixedTitle.length),i)+TLDs[i]);
         } else if (!FixedLink.startsWith("http://")) {
-          Titles.push(DeregisterTLD(FixedTitle,i)+TLDs[i]);
+          Titles.push(DeregisterTLD(FixedTitle.slice(1,FixedTitle.length),i)+TLDs[i]);
         }
       }
       Descs.push("This page does not have an associated description.");
