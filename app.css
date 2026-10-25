@@ -3,7 +3,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   align-content: center;
   text-align: center;
-  animation: wave 1s ease-in-out alternate;
+  animation: wave 10s ease-in-out alternate infinite;
   height: 100vh;
   width: 100vw;
 }
@@ -14,10 +14,19 @@ body {
 }
 
 @keyframes wave {
-  from {
-    background-image: linear-gradient(90deg, #fff, rgb(199, 143, 255));
+  0% {
+    background-color: rgb(199, 143, 255);
   }
-  to {
-    background-image: linear-gradient(135deg, #fff, rgb(204, 199, 255));
+  25% {
+    background-color: rgb(204, 199, 255);
+  }
+  50% {
+    background-color: rgb(230, 230, 255);
+  }
+  75% {
+    background-color: rgb(204, 199, 255);
+  }
+  100% {
+    background-color: rgb(199, 143, 255);
   }
 }
