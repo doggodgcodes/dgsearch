@@ -21,6 +21,7 @@ body {
   width: 40vw;
   border: 5px outset #7200bc;
   background-color: #8300cd;
+  resize: none;
 }
 #searchBar:focus {
   border: 5px inset #7200bc;
