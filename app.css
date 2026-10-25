@@ -27,6 +27,11 @@ body {
   border: 5px inset #7200bc;
 }
 
+.result {
+  background-color: blueviolet;
+  border-radius: 20px;
+}
+
 @keyframes load {
   from {
     width: 0vw;

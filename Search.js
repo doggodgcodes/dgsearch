@@ -11,7 +11,7 @@ document.addEventListener("keydown", function(e) {
     Container.innerHTML = "<ul";
     for (let i = 0; i < Links.length-1; i++) {
       if (Links[i].includes(SearchBar.value)) {
-        Container.innerHTML = Container.innerHTML + `<a href="${Links[i]}"><h1>${Titles[i]}</h1><br><br><span>${Descs[i]}</span></a><br><br>`;
+        Container.innerHTML = Container.innerHTML + `<div class="result"><a href="${Links[i]}" target="_blank"><h1>${Titles[i]}</h1><span>${Descs[i]}</span></a></div>`;
       }
     }
   }
@@ -50,4 +50,4 @@ function RegisterLink(Link, Title = Link, Description = "This page does not have
   }
 }
 
-RegisterLink("doggodgcodes.github.io");
+RegisterLink("doggodgcodes.github.io", "The doggodgcodes website!", "Website");
