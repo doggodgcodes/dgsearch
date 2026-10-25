@@ -14,6 +14,27 @@ body {
   padding: 3px;
 }
 
+#searchBar {
+  padding: 10px;
+  border-radius: 20px;
+  animation: load 0.5s ease-in-out alternate;
+  width: 20vw;
+  border: 5px outset #7200bc;
+  background-color: #8300cd;
+}
+#searchBar:focus {
+  border: 5px inset #7200bc;
+}
+
+@keyframes load {
+  from {
+    width: 0vw;
+  }
+  to {
+    width: 20vw;
+  }
+}
+
 @keyframes wave {
   0% {
     background-color: rgb(199, 143, 255);
