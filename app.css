@@ -30,6 +30,8 @@ body {
 .result {
   background-color: blueviolet;
   border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
 }
 
 @keyframes load {

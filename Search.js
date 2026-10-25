@@ -25,7 +25,7 @@ function RegisterLink(Link, Title = Link, Description = "This page does not have
   let FixedLink = Link;
   let FixedTitle = Title;
   let titleNormalized;
-  if (FixedTitle == FixedLink) {
+  if (!FixedTitle == FixedLink) {
     titleNormalized = true;
   } else {
     titleNormalized = false;
