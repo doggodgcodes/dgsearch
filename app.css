@@ -1,8 +1,10 @@
 body {
   padding: 50px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  align-content: center;
 }
 .warning {
   background-color: #ffa;
-  border-radius: 3px;
+  border-radius: 5px;
+  padding: 3px;
 }
