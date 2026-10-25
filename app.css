@@ -1,0 +1,8 @@
+body {
+  padding: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.warning {
+  background-color: #ffa;
+  border-radius: 3px;
+}
