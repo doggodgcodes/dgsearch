@@ -1,10 +1,23 @@
 body {
-  padding: 50px;
+  padding-top: 50px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   align-content: center;
+  text-align: center;
+  animation: wave 1s infinite alternate;
+  height: 100vh;
+  width: 100vw;
 }
 .warning {
   background-color: #ffa;
   border-radius: 5px;
   padding: 3px;
+}
+
+@keyframes wave {
+  from {
+    background-image: linear-gradient(20deg, #fff, rgb(199, 143, 255));
+  }
+  to {
+    background-image: linear-gradient(20deg, #fff, rgb(204, 199, 255));
+  }
 }
