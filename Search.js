@@ -51,4 +51,4 @@ function RegisterLink(Link, Title = Link, Description = "This page does not have
   }
 }
 
-RegisterLink("doggodgcodes.github.io")
+RegisterLink("doggodgcodes.github.io");
